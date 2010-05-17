@@ -1,71 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Page allowcloseontop="false" eq2usescomwndcontrols="true" Location="46,17" MinimumSize="210,145" Name="MainChat" PackLocation="left,bottom" PackSize="fixed,fixed" ScrollExtent="397,180" Size="397,180" UserMovable="true" UserResizable="true" Visible="false">
-    <Text AbsorbsInput="false" Color="#FF0000" Font="/TextStyles.Normal.NormalStyle" GetsInput="false" Location="307,22" MinimumScrollExtent="28,14" MinimumSize="28,14" Name="AFKMark" PackLocation="fff" ScrollExtent="28,15" Size="28,14" TooltipDisabled="true" TruncateElipsis="false" UserScrollable="false" Visible="false">AFK</Text>
-    <Page ISON="chat_show_time" Location="332,19" Name="Buttons" OnHoverIn="opacity=1" OnHoverOut="opacity=0" OnShow="ISON=chat_show_time&#xD;&#xA;ToggleTimestamp.checked=ISON" Opacity="0.000" PackLocation="fff" ScrollExtent="50,19" Size="50,19">
-        <Checkbox Activated="true" BackgroundOpacity="0.675" Checked="true" Color="#FF0000" DynamicData="/GameData.Self.AFK" Name="ToggleAFK" OnPress="afk" OnSet="Parent.Parent.AFKMark.visible=true" OnUnset="Parent.Parent.AFKMark.visible=false" ScrollExtent="18,18" Size="18,18" Style="/CommonElements.Checkbox.data.style" Tooltip="Toggle AFK" />
-        <Checkbox Activated="true" BackgroundOpacity="0.675" Checked="true" Location="15,0" Name="ToggleChatShadows" OnSet="Parent.Parent.chat_textbox.NormalTextShadowStyle=&apos;/ShadowStyles.Chat.Outline1&apos;&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.ChatDisplay.ShadowStyle=&apos;/ShadowStyles.Chat.Outline1&apos;" OnUnset="Parent.Parent.chat_textbox.NormalTextShadowStyle=&apos;/ShadowStylesNew.None.style&apos;&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.ChatDisplay.ShadowStyle=&apos;/ShadowStylesNew.None.style&apos;" ScrollExtent="18,18" Size="18,18" Style="/CommonElements.RadioButton.data.style" Tooltip="Toggle Chat Text Shadows" />
-        <Checkbox BackgroundOpacity="0.675" chat_show_time="0" Location="30,0" Name="ToggleTimestamp" OnSet="chat_show_time=1 chat_show_time=1" OnUnset="chat_show_time=0 chat_show_time=0" ScrollExtent="18,18" Size="18,18" Style="/CommonElements.Checkbox.data.style" Tooltip="Toggle Chat Timestamp" />
-    </Page>
-    <Page Location="1,0" Name="ChatPage" PackSize="absolute,absolute" ScrollExtent="396,179" Size="396,179">
-        <Page FrameControl="true" Location="-1,7" Name="TabFrame" PackSize="a" ScrollExtent="399,19" Size="399,19">
-            <Button backdropcontrol="false" BackgroundOpacity="0.600" Enabled="false" Location="366,0" Name="tableft" PackLocation="fff" ScrollExtent="15,15" Size="15,15" Style="/ButtonStyles.tabscroll_right" Visible="false" />
-            <Button backdropcontrol="false" BackgroundOpacity="0.600" Enabled="false" Location="380,0" Name="tabright" PackLocation="fff" ScrollExtent="15,15" Size="15,15" Style="/ButtonStyles.tabscroll_left" Visible="false" />
-            <ButtonStyle DisabledTextStyle="/TextStyles.Normal.NormalStyle" MouseOverSound="ui_mouseover" MouseOverTextStyle="/TextStyles.Normal.NormalStyle" Name="DrumsUI_chat_tab_style" NormalTextColor="#F0D0A0" NormalTextStyle="/TextStyles.Normal.NormalStyle" PressedTextStyle="/TextStyles.Normal.NormalStyle" PressSound="ui_pressed" ReleaseSound="ui_released" RStyleActivated="MTabButton.tab_active" RStyleDefault="MTabButton.tab_inactive" RStyleDisabled="MTabButton.tab_disabled" RStyleDisabledActivated="MTabButton.tab_active" RStyleMouseOver="MTabButton.tab_inactive" RStyleMouseOverActivated="MTabButton.tab_active" RStyleMouseOverSelected="MTabButton.tab_active" RStyleSelected="MTabButton.tab_active" SelectedTextStyle="/TextStyles.Normal.NormalStyle" />
-            <TabbedPaneStyle ButtonStyle="DrumsUI_chat_tab_style" Name="DrumsUI_chat_tab" />
-            <Namespace Name="MTabButton">
-                <Namespace Name="Active">
-                    <ImageStyle Filter="true" Name="ne">
-                        <ImageFrame Name="image" Source="DrumsUI/images/window_elements.dds" SourceRect="63,5,87,32" />
-                    </ImageStyle>
-                    <ImageStyle Filter="true" Name="nw">
-                        <ImageFrame Name="image" Source="DrumsUI/images/window_elements.dds" SourceRect="7,5,26,32" />
-                    </ImageStyle>
-                    <ImageStyle Filter="true" Name="north">
-                        <ImageFrame Name="image" Source="DrumsUI/images/window_elements.dds" SourceRect="28,5,66,32" />
-                    </ImageStyle>
-                </Namespace>
-                <Namespace Name="Inactive">
-                    <ImageStyle Filter="true" Name="ne">
-                        <ImageFrame Name="image" Source="DrumsUI/images/window_elements.dds" SourceRect="146,4,170,29" />
-                    </ImageStyle>
-                    <ImageStyle Filter="true" Name="north">
-                        <ImageFrame Name="image" Source="DrumsUI/images/window_elements.dds" SourceRect="115,4,153,29" />
-                    </ImageStyle>
-                    <ImageStyle Filter="true" Name="nw">
-                        <ImageFrame Name="image" Source="DrumsUI/images/window_elements.dds" SourceRect="86,4,105,29" />
-                    </ImageStyle>
-                </Namespace>
-                <RectangleStyle Center="/imagelist.win_blank_space" CenterShrinkH="true" CenterShrinkV="true" EastShrink="true" Name="tab_active" North="Active.north" NorthEast="Active.ne" NorthStretch="false" NorthWest="Active.nw" SouthStretch="false" WestShrink="true" />
-                <RectangleStyle Center="/imagelist.win_blank_space" CenterShrinkH="true" CenterShrinkV="true" EastShrink="true" Name="tab_inactive" North="Inactive.north" NorthEast="Inactive.ne" NorthStretch="false" NorthWest="Inactive.nw" SouthStretch="false" WestShrink="true" />
-                <RectangleStyle Center="/imagelist.win_blank_space" CenterShrinkH="true" CenterShrinkV="true" EastShrink="true" Name="tab_disabled" North="Active.north" NorthEast="Active.ne" NorthStretch="false" NorthWest="Active.nw" SouthStretch="false" WestShrink="true" />
-            </Namespace>
-            <TabbedPane ActiveTab="0" DataSource="TabSource" Name="TabPane" PackSize="a" ScrollExtent="396,18" ScrollLeftButton="tableft" ScrollRightButton="tabright" Size="396,18" Style="DrumsUI_chat_tab" />
-            <Image BackgroundOpacity="1.000" FrameControl="true" Location="0,14" Name="oldRule" Opacity="0.500" PackSize="a" ScrollExtent="399,2" Size="399,2" SourceRect="568,493,938,495" SourceResource="images/windowelements.dds" Visible="false" />
+        <Page allowcloseontop="false" eq2usescomwndcontrols="true" Location="24,15" MinimumSize="210,100" Name="MainChat" PackLocation="left,bottom" PackSize="fixed,fixed" ScrollExtent="397,132" Size="397,132" UserMovable="true" UserResizable="true" Visible="false">
+            <Text AbsorbsInput="false" Color="#FF0000" Font="/TextStyles.Normal.NormalStyle" GetsInput="false" Location="307,22" MinimumScrollExtent="28,14" MinimumSize="28,14" Name="AFKMark" PackLocation="fff" ScrollExtent="28,15" Size="28,14" TooltipDisabled="true" TruncateElipsis="false" UserScrollable="false" Visible="false">AFK</Text>
+            <Page ISON="chat_show_time" Location="332,19" Name="Buttons" OnHoverIn="opacity=1" OnHoverOut="opacity=0" OnShow="ISON=chat_show_time&#xD;&#xA;ToggleTimestamp.checked=ISON" Opacity="0.000" PackLocation="fff" ScrollExtent="50,19" Size="50,19">
+                <Checkbox Activated="true" BackgroundOpacity="0.675" Checked="true" Color="#FF0000" DynamicData="/GameData.Self.AFK" Name="ToggleAFK" OnPress="afk" OnSet="Parent.Parent.AFKMark.visible=true" OnUnset="Parent.Parent.AFKMark.visible=false" ScrollExtent="18,18" Size="18,18" Style="/CommonElements.Checkbox.data.style" Tooltip="Toggle AFK" />
+                <Checkbox Activated="true" BackgroundOpacity="0.675" Checked="true" Location="15,0" Name="ToggleChatShadows" OnSet="Parent.Parent.chat_textbox.NormalTextShadowStyle=&apos;/ShadowStyles.Chat.Outline1&apos;&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.ChatDisplay.ShadowStyle=&apos;/ShadowStyles.Chat.Outline1&apos;" OnUnset="Parent.Parent.chat_textbox.NormalTextShadowStyle=&apos;/ShadowStylesNew.None.style&apos;&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.ChatDisplay.ShadowStyle=&apos;/ShadowStylesNew.None.style&apos;" ScrollExtent="18,18" Size="18,18" Style="/CommonElements.RadioButton.data.style" Tooltip="Toggle Chat Text Shadows" />
+                <Checkbox BackgroundOpacity="0.675" chat_show_time="0" Location="30,0" Name="ToggleTimestamp" OnSet="chat_show_time=1 chat_show_time=1" OnUnset="chat_show_time=0 chat_show_time=0" ScrollExtent="18,18" Size="18,18" Style="/CommonElements.Checkbox.data.style" Tooltip="Toggle Chat Timestamp" />
+            </Page>
+            <Page Location="1,0" Name="ChatPage" PackSize="absolute,absolute" ScrollExtent="396,131" Size="396,131">
+                <Page FrameControl="true" Location="-1,7" Name="TabFrame" PackSize="a" ScrollExtent="399,19" Size="399,19">
+                    <Button backdropcontrol="false" BackgroundOpacity="0.600" Enabled="false" Location="366,0" Name="tableft" PackLocation="fff" ScrollExtent="15,15" Size="15,15" Style="/ButtonStyles.tabscroll_right" Visible="false" />
+                    <Button backdropcontrol="false" BackgroundOpacity="0.600" Enabled="false" Location="380,0" Name="tabright" PackLocation="fff" ScrollExtent="15,15" Size="15,15" Style="/ButtonStyles.tabscroll_left" Visible="false" />
+                    <ButtonStyle DisabledTextStyle="/TextStyles.Normal.NormalStyle" MouseOverSound="ui_mouseover" MouseOverTextStyle="/TextStyles.Normal.NormalStyle" Name="DrumsUI_chat_tab_style" NormalTextColor="#F0D0A0" NormalTextStyle="/TextStyles.Normal.NormalStyle" PressedTextStyle="/TextStyles.Normal.NormalStyle" PressSound="ui_pressed" ReleaseSound="ui_released" RStyleActivated="MTabButton.tab_active" RStyleDefault="MTabButton.tab_inactive" RStyleDisabled="MTabButton.tab_disabled" RStyleDisabledActivated="MTabButton.tab_active" RStyleMouseOver="MTabButton.tab_inactive" RStyleMouseOverActivated="MTabButton.tab_active" RStyleMouseOverSelected="MTabButton.tab_active" RStyleSelected="MTabButton.tab_active" SelectedTextStyle="/TextStyles.Normal.NormalStyle" />
+                    <TabbedPaneStyle ButtonStyle="DrumsUI_chat_tab_style" Name="DrumsUI_chat_tab" />
+                    <Namespace Name="MTabButton">
+                        <Namespace Name="Active">
+                            <ImageStyle Filter="true" Name="ne">
+                                <ImageFrame Name="image" Source="DrumsUI/images/window_elements.dds" SourceRect="63,5,87,32" />
+                            </ImageStyle>
+                            <ImageStyle Filter="true" Name="nw">
+                                <ImageFrame Name="image" Source="DrumsUI/images/window_elements.dds" SourceRect="7,5,26,32" />
+                            </ImageStyle>
+                            <ImageStyle Filter="true" Name="north">
+                                <ImageFrame Name="image" Source="DrumsUI/images/window_elements.dds" SourceRect="28,5,66,32" />
+                            </ImageStyle>
+                        </Namespace>
+                        <Namespace Name="Inactive">
+                            <ImageStyle Filter="true" Name="ne">
+                                <ImageFrame Name="image" Source="DrumsUI/images/window_elements.dds" SourceRect="146,4,170,29" />
+                            </ImageStyle>
+                            <ImageStyle Filter="true" Name="north">
+                                <ImageFrame Name="image" Source="DrumsUI/images/window_elements.dds" SourceRect="115,4,153,29" />
+                            </ImageStyle>
+                            <ImageStyle Filter="true" Name="nw">
+                                <ImageFrame Name="image" Source="DrumsUI/images/window_elements.dds" SourceRect="86,4,105,29" />
+                            </ImageStyle>
+                        </Namespace>
+                        <RectangleStyle Center="/imagelist.win_blank_space" CenterShrinkH="true" CenterShrinkV="true" EastShrink="true" Name="tab_active" North="Active.north" NorthEast="Active.ne" NorthStretch="false" NorthWest="Active.nw" SouthStretch="false" WestShrink="true" />
+                        <RectangleStyle Center="/imagelist.win_blank_space" CenterShrinkH="true" CenterShrinkV="true" EastShrink="true" Name="tab_inactive" North="Inactive.north" NorthEast="Inactive.ne" NorthStretch="false" NorthWest="Inactive.nw" SouthStretch="false" WestShrink="true" />
+                        <RectangleStyle Center="/imagelist.win_blank_space" CenterShrinkH="true" CenterShrinkV="true" EastShrink="true" Name="tab_disabled" North="Active.north" NorthEast="Active.ne" NorthStretch="false" NorthWest="Active.nw" SouthStretch="false" WestShrink="true" />
+                    </Namespace>
+                    <TabbedPane ActiveTab="0" DataSource="TabSource" Name="TabPane" PackSize="a" ScrollExtent="396,18" ScrollLeftButton="tableft" ScrollRightButton="tabright" Size="396,18" Style="DrumsUI_chat_tab" />
+                    <Image BackgroundOpacity="1.000" FrameControl="true" Location="0,14" Name="oldRule" Opacity="0.500" PackSize="a" ScrollExtent="399,2" Size="399,2" SourceRect="568,493,938,495" SourceResource="images/windowelements.dds" Visible="false" />
+                </Page>
+                <Scrollbar ArrowPressSound="ui_pressed" Control="ChatFrame.ChatDisplay" Location="378,20" Name="ChatScroll" OnHoverIn="Opacity=1" OnHoverOut="Opacity=0" Opacity="0.000" PackLocation="right,top" PackSize="absolute,absolute" ScrollExtent="21,114" Size="21,114" Style="/CommonElements.ScrollbarVertical.data.style" />
+                <Page Location="0,23" Name="ChatFrame" PackSize="a,a" ScrollExtent="396,108" Size="396,108">
+                    <Page AbsorbsInput="false" GetsInput="false" Name="FullHeightHolder" PackLocation="left,top" PackSize="absolute,absolute" ScrollExtent="11,108" Size="11,108" Visible="false" />
+                    <Button Location="365,93" Name="DefaultChannelButton" OnHoverIn="opacity=1&#xD;&#xA;parent.DefaultChannelBkg.opacity=1" OnHoverOut="Opacity=0&#xD;&#xA;parent.DefaultChannelBkg.opacity=0" Opacity="0.000" PackLocation="right,bottom" ScrollExtent="15,15" Size="15,15" Style="/ButtonStyles.channel_button" Tooltip=":d7771435165ac099:Default Chat Channel" />
+                    <Image Location="365,93" Name="DefaultChannelBkg" Opacity="0.000" PackLocation="right,bottom" ScrollExtent="15,15" Size="15,15" SourceRect="122,219,137,234" SourceResource="images/widgets01.dds" />
+                    <Textbox BackgroundColor="#FFFFFF" Color="#F0F0F0" Cursor="/Cursor.Text" Location="0,90" MaximumSize="16384,18" MinimumSize="30,18" Name="ChatInput" OnHoverIn="Parent.DefaultChannelButton.opacity=1&#xD;&#xA;Parent.DefaultChannelBkg.opacity=1" OnHoverOut="Parent.DefaultChannelButton.opacity=0&#xD;&#xA;Parent.DefaultChannelBkg.opacity=0" PackLocation=",fff" PackSize="a" ScrollExtent="379,18" Size="379,18" Style="chat_textbox" />
+                    <Page BackgroundOpacity="0.200" Location="0,90" Name="ChatShadow" PackLocation=",fff" PackSize="a" ScrollExtent="396,18" Size="396,18" />
+                    <Text AbsorbsInput="false" Cursor="/Cursor.Text" Font="/Fonts.Font_Chat" GetsInput="false" Margin="0,0,0,1" Name="ChatDisplay" PackLocation="left,top" PackSize="absolute,absolute" ScrollExtent="396,90" ShadowStyle="/ShadowStyles.Chat.Outline1" Size="396,90" TextAlignmentVertical="Bottom">:d77714357478a2d2:1 2 3 4 5 6 7 8</Text>
+                    <Page AbsorbsInput="false" GetsInput="false" Name="HeightHolder" PackLocation="left,top" PackSize="absolute,absolute" ScrollExtent="11,90" Size="11,90" Visible="false" />
+                </Page>
+                <Page AbsorbsInput="false" backdropcontrol="true" BackgroundOpacity="1.000" Location="1,6" Name="oldTabBkg" PackSize="a" ScrollExtent="397,19" Size="397,19" Visible="false" />
+            </Page>
+            <Page AbsorbsInput="false" FrameControl="true" Location="-13,32" Name="AuxFrame" PackSize="a,a" ScrollExtent="420,116" Size="420,116" Visible="false">
+                <Page AbsorbsInput="false" BackgroundOpacity="1.000" Location="0,-52" Name="Frame" PackSize="a,a" RStyleDefault="/WindowElements.WindowFrame.data.frame.rect" ScrollExtent="418,144" Size="418,144" Visible="false" />
+            </Page>
+            <DataSource Name="TabSource">
+                <Data Name="One" target="SomeWidget" text=":d7771435bdde3fee:One" />
+                <Data Name="Two" text=":d7771435d6783379:Two" />
+            </DataSource>
+            <TextboxStyle CaratColor="#F1E823" CaratWidth="2" DisabledTextShadowStyle="/ShadowStyles.Chat.Outline1" Name="chat_textbox" NormalTextShadowStyle="/ShadowStyles.Chat.Outline1" NormalTextStyle="/Fonts.Font_ChatInput" RStyleDefault="/rectlist.win_background" SelectedTextShadowStyle="/ShadowStyles.Chat.Outline1" SelectionColor="#A0A0A0" SelectionOpacity="1.000" TextColor="#FFFFFF" TextPadding="4,1,4,1" />
+            <Page AbsorbsInput="false" Location="-2,0" Name="WindowFrame" PackSize="a,a" ScrollExtent="401,134" Size="401,134">
+                <Page AbsorbsInput="false" backdropcontrol="true" BackgroundOpacity="1.000" frame.top="0" Location="0,5" Name="LeftGrouper" OnHide="Parent.Frame.Top = 17&#xD;&#xA;Parent.Frame.Height = Parent.FakeFrame.Height" OnShow="Parent.Frame.Top = 0&#xD;&#xA;Parent.Frame.Height = Parent.Height" PackSize="a" ScrollExtent="401,17" Size="401,17" Visible="false" />
+                <Page AbsorbsInput="false" Location="0,17" Name="Frame" OnHide="Parent.Parent.ChatPage.ChatFrame.ChatInput.visible=true&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.ChatShadow.visible=true&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.DefaultChannelButton.visible=true&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.DefaultChannelBkg.visible=true&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.ChatDisplay.size=(Parent.Parent.ChatPage.ChatFrame.width ## &apos;,&apos; ## H) H=(Parent.Parent.ChatPage.ChatFrame.height) - (Parent.Parent.ChatPage.ChatFrame.ChatInput.height)" OnShow="Parent.Parent.ChatPage.ChatFrame.ChatInput.visible=false&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.ChatShadow.visible=false&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.DefaultChannelButton.visible=false&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.DefaultChannelBkg.visible=false&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.ChatDisplay.size=(Parent.Parent.ChatPage.ChatFrame.size)" PackSize="a,a" RStyleDefault="/WindowElements.DesktopWindowFrame.data.frame.rect" ScrollExtent="401,117" Size="401,117" test="147.000" />
+                <Page AbsorbsInput="false" BackgroundOpacity="1.000" Location="0,17" Name="FakeFrame" PackSize="a,a" ScrollExtent="401,117" Size="401,117" test="147.000" Visible="false" />
+                <Page AbsorbsInput="false" BackgroundOpacity="1.000" Location="0,22" Name="Bkg" PackSize="a,a" ScrollExtent="401,112" Size="401,112" />
+            </Page>
         </Page>
-        <Scrollbar ArrowPressSound="ui_pressed" Control="ChatFrame.ChatDisplay" Location="378,20" Name="ChatScroll" OnHoverIn="Opacity=1" OnHoverOut="Opacity=0" Opacity="0.000" PackLocation="right,top" PackSize="absolute,absolute" ScrollExtent="21,162" Size="21,162" Style="/CommonElements.ScrollbarVertical.data.style" />
-        <Page Location="0,23" Name="ChatFrame" PackSize="a,a" ScrollExtent="396,156" Size="396,156">
-            <Page AbsorbsInput="false" GetsInput="false" Name="FullHeightHolder" PackLocation="left,top" PackSize="absolute,absolute" ScrollExtent="11,156" Size="11,156" Visible="false" />
-            <Button Location="365,141" Name="DefaultChannelButton" OnHoverIn="opacity=1&#xD;&#xA;parent.DefaultChannelBkg.opacity=1" OnHoverOut="Opacity=0&#xD;&#xA;parent.DefaultChannelBkg.opacity=0" Opacity="0.000" PackLocation="right,bottom" ScrollExtent="15,15" Size="15,15" Style="/ButtonStyles.channel_button" Tooltip=":d7771435165ac099:Default Chat Channel" />
-            <Image Location="365,141" Name="DefaultChannelBkg" Opacity="0.000" PackLocation="right,bottom" ScrollExtent="15,15" Size="15,15" SourceRect="122,219,137,234" SourceResource="images/widgets01.dds" />
-            <Textbox BackgroundColor="#FFFFFF" Color="#F0F0F0" Cursor="/Cursor.Text" Location="0,138" MaximumSize="16384,18" MinimumSize="30,18" Name="ChatInput" OnHoverIn="Parent.DefaultChannelButton.opacity=1&#xD;&#xA;Parent.DefaultChannelBkg.opacity=1" OnHoverOut="Parent.DefaultChannelButton.opacity=0&#xD;&#xA;Parent.DefaultChannelBkg.opacity=0" PackLocation=",fff" PackSize="a" ScrollExtent="379,18" Size="379,18" Style="chat_textbox" />
-            <Page BackgroundOpacity="0.200" Location="0,138" Name="ChatShadow" PackLocation=",fff" PackSize="a" ScrollExtent="396,18" Size="396,18" />
-            <Text AbsorbsInput="false" Cursor="/Cursor.Text" Font="/Fonts.Font_Chat" GetsInput="false" Margin="0,0,0,1" Name="ChatDisplay" PackLocation="left,top" PackSize="absolute,absolute" ScrollExtent="396,138" ShadowStyle="/ShadowStyles.Chat.Outline1" Size="396,138" TextAlignmentVertical="Bottom">:d77714357478a2d2:1 2 3 4 5 6 7 8</Text>
-            <Page AbsorbsInput="false" GetsInput="false" Name="HeightHolder" PackLocation="left,top" PackSize="absolute,absolute" ScrollExtent="11,138" Size="11,138" Visible="false" />
-        </Page>
-        <Page AbsorbsInput="false" backdropcontrol="true" BackgroundOpacity="1.000" Location="1,6" Name="oldTabBkg" PackSize="a" ScrollExtent="397,19" Size="397,19" Visible="false" />
-    </Page>
-    <Page AbsorbsInput="false" FrameControl="true" Location="-13,32" Name="AuxFrame" PackSize="a,a" ScrollExtent="420,164" Size="420,164" Visible="false">
-        <Page AbsorbsInput="false" BackgroundOpacity="1.000" Location="0,-52" Name="Frame" PackSize="a,a" RStyleDefault="/WindowElements.WindowFrame.data.frame.rect" ScrollExtent="418,192" Size="418,192" Visible="false" />
-    </Page>
-    <DataSource Name="TabSource">
-        <Data Name="One" target="SomeWidget" text=":d7771435bdde3fee:One" />
-        <Data Name="Two" text=":d7771435d6783379:Two" />
-    </DataSource>
-    <TextboxStyle CaratColor="#F1E823" CaratWidth="2" DisabledTextShadowStyle="/ShadowStyles.Chat.Outline1" Name="chat_textbox" NormalTextShadowStyle="/ShadowStyles.Chat.Outline1" NormalTextStyle="/Fonts.Font_ChatInput" RStyleDefault="/rectlist.win_background" SelectedTextShadowStyle="/ShadowStyles.Chat.Outline1" SelectionColor="#A0A0A0" SelectionOpacity="1.000" TextColor="#FFFFFF" TextPadding="4,1,4,1" />
-    <Page AbsorbsInput="false" Location="-2,0" Name="WindowFrame" PackSize="a,a" ScrollExtent="401,182" Size="401,182">
-        <Page AbsorbsInput="false" backdropcontrol="true" BackgroundOpacity="1.000" frame.top="0" Location="4,5" Name="LeftGrouper" OnHide="Parent.Frame.Top = 17&#xD;&#xA;Parent.Frame.Height = Parent.FakeFrame.Height" OnShow="Parent.Frame.Top = 0&#xD;&#xA;Parent.Frame.Height = Parent.Height" PackSize="a" ScrollExtent="393,17" Size="393,17" Visible="false" />
-        <Page AbsorbsInput="false" Location="0,17" Name="Frame" OnHide="Parent.Parent.ChatPage.ChatFrame.ChatInput.visible=true&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.ChatShadow.visible=true&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.DefaultChannelButton.visible=true&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.DefaultChannelBkg.visible=true&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.ChatDisplay.size=(Parent.Parent.ChatPage.ChatFrame.width ## &apos;,&apos; ## H) H=(Parent.Parent.ChatPage.ChatFrame.height) - (Parent.Parent.ChatPage.ChatFrame.ChatInput.height)" OnShow="Parent.Parent.ChatPage.ChatFrame.ChatInput.visible=false&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.ChatShadow.visible=false&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.DefaultChannelButton.visible=false&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.DefaultChannelBkg.visible=false&#xD;&#xA;Parent.Parent.ChatPage.ChatFrame.ChatDisplay.size=(Parent.Parent.ChatPage.ChatFrame.size)" PackSize="a,a" RStyleDefault="/WindowElements.DesktopWindowFrame.data.frame.rect" ScrollExtent="401,165" Size="401,165" test="147.000" />
-        <Page AbsorbsInput="false" BackgroundOpacity="1.000" Location="0,17" Name="FakeFrame" PackSize="a,a" ScrollExtent="401,165" Size="401,165" test="147.000" Visible="false" />
-        <Page AbsorbsInput="false" BackgroundOpacity="1.000" Location="0,22" Name="Bkg" PackSize="a,a" ScrollExtent="401,160" Size="401,160" />
-    </Page>
-</Page>
