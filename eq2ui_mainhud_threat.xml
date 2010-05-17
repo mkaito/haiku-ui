@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Page eq2usescomwndcontrols="true" Location="27,12" MaximumSize="500,70" MinimumSize="100,30" Name="Threat" OnShow="Attack.Visible=WindowFrame.Frame.Visible&#xD;&#xA;Attack.Primary.Visible=Attack.Primary.Bar.Visible&#xD;&#xA;Attack.Ranged.Visible=Attack.Ranged.Bar.Visible" PackLocation="right,bottom" ScrollExtent="314,30" Size="314,30" UserMovable="true" UserResizable="true" version="1.1">
-    <Page COND="false" eq2usescomwndcontrols="true" Location="29,2" MaximumSize="16000,16000" Name="Attack" OnShow="Visible=Parent.WindowFrame.Visible&#xD;&#xA;Primary.Visible=Primary.Bar.Visible &amp;&amp; IsHated.Visible&#xD;&#xA;Ranged.Visible=Ranged.Bar.Visible &amp;&amp; IsHated.Visible" PackLocation="nfn,nfn" PackSize="absolute,fixed" ScrollExtent="254,8" Size="254,8" version="4.0">
+<Page eq2usescomwndcontrols="true" Location="27,12" MaximumSize="500,70" MinimumSize="100,30" Name="Threat" OnShow="show_window MainHUD.Threat.Attack.DisplayCtrl" PackLocation="right,bottom" ScrollExtent="314,30" Size="314,30" UserMovable="true" UserResizable="true" version="1.1">
+    <Page COND="false" eq2usescomwndcontrols="true" Location="29,2" MaximumSize="16000,16000" Name="Attack" OnShow="show_window MainHUD.Threat.Attack.DisplayCtrl" PackLocation="nfn,nfn" PackSize="absolute,fixed" ScrollExtent="254,8" Size="254,8" version="4.0">
+        <Page Name="DisplayCtrl" OnShow="Parent.Visible=Parent.Parent.WindowFrame.Visible&#xD;&#xA;&#xD;&#xA;BisHated=Parent.IsHated.Visible&#xD;&#xA;BPrimary=Parent.Primary.Bar.Visible&#xD;&#xA;BRanged=Parent.Ranged.Bar.Visible&#xD;&#xA;&#xD;&#xA;Parent.Primary.Visible=BPrimary &amp;&amp; BisHated&#xD;&#xA;Parent.Ranged.Visible=BRanged &amp;&amp; BisHated&#xD;&#xA;&#xD;&#xA;Visible=False" ScrollExtent="320,240" Size="320,240" Visible="false" />
         <ProgressbarStyle Bar.Background="progress_fill" Name="attackbar_style" />
         <ImageStyle Name="progress_fill">
             <ImageFrame Name="progress_fill" Source="images/window_elements_generic.dds" SourceRect="221,483,379,489" />
         </ImageStyle>
         <Image DynamicData="/GameData.Self.IsHated" Name="IsHated" OnShow="show_window MainHUD.Threat.Attack" />
         <Page AbsorbsInput="false" Name="Primary" PackLocation="nfn,nfn" PackSize="Absolute,Absolute" ScrollExtent="254,4" Size="254,4">
-            <Progressbar AbsorbsInput="false" BackgroundColor="#000000" Color="#FF7E00" Name="OOC" PackSize="absolute,fixed" Progress="1.000" ScrollExtent="254,4" Size="254,4" Style="attackbar_style" Visible="false" />
+            <Progressbar AbsorbsInput="false" BackgroundColor="#000000" Color="#FF7E00" Name="OOC" PackSize="absolute,fixed" Progress="1.000" ScrollExtent="254,4" Size="254,4" Style="attackbar_style" />
             <Progressbar AbsorbsInput="false" BackgroundColor="#000000" DynamicData="/GameData.Self.TimeSinceAutoAttack" Name="Bar" OnHide="Parent.Parent.Visible=Parent.Parent.IsHated.Visible&#xD;&#xA;Parent.OOC.Visible=True" OnShow="Parent.OOC.Visible=False&#xD;&#xA;Parent.Visible=True&#xD;&#xA;Parent.Parent.Ranged.Visible=False" PackSize="absolute,fixed" Progress="0.500" ScrollExtent="254,4" Size="254,4" Style="attackbar_style" />
             <Image AbsorbsInput="false" Name="Bkg" PackSize="absolute,fixed" ScrollExtent="254,4" Size="254,4" SourceRect="220,472,380,478" SourceResource="/images/window_elements_generic.dds" />
         </Page>
         <Page AbsorbsInput="false" Name="Ranged" PackLocation="nfn.nfn" PackSize="absolute,fixed" ScrollExtent="254,4" Size="254,4">
-            <Progressbar AbsorbsInput="false" BackgroundColor="#000000" Color="#FF7E00" Name="OOC" PackSize="absolute,fixed" Progress="1.000" ScrollExtent="254,4" Size="254,4" Style="attackbar_style" Visible="false" />
+            <Progressbar AbsorbsInput="false" BackgroundColor="#000000" Color="#FF7E00" Name="OOC" PackSize="absolute,fixed" Progress="1.000" ScrollExtent="254,4" Size="254,4" Style="attackbar_style" />
             <Progressbar AbsorbsInput="false" BackgroundColor="#000000" DynamicData="/GameData.Self.TimeSinceRangedAutoAttack" Name="Bar" OnHide="Parent.Parent.Visible=Parent.Parent.IsHated.Visible&#xD;&#xA;Parent.OOC.Visible=True" OnShow="Parent.OOC.Visible=False&#xD;&#xA;Parent.Visible=True&#xD;&#xA;Parent.Parent.Melee.Visible=False" PackSize="absolute,fixed" Progress="0.500" ScrollExtent="254,4" Size="254,4" Style="attackbar_style" />
             <Image AbsorbsInput="false" Name="Bkg" PackSize="absolute,fixed" ScrollExtent="254,4" Size="254,4" SourceRect="220,472,380,478" SourceResource="/images/window_elements_generic.dds" />
         </Page>
