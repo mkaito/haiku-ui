@@ -14,7 +14,7 @@
         </Page>
         <Page AbsorbsInput="false" Name="Ranged" PackLocation="nfn.nfn" PackSize="absolute,fixed" ScrollExtent="254,4" Size="254,4">
             <Progressbar AbsorbsInput="false" BackgroundColor="#000000" Color="#FF7E00" Name="OOC" PackSize="absolute,fixed" Progress="1.000" ScrollExtent="254,4" Size="254,4" Style="attackbar_style" />
-            <Progressbar AbsorbsInput="false" BackgroundColor="#000000" DynamicData="/GameData.Self.TimeSinceRangedAutoAttack" Name="Bar" OnHide="Parent.Parent.Visible=Parent.Parent.IsHated.Visible&#xD;&#xA;Parent.OOC.Visible=True" OnShow="Parent.OOC.Visible=False&#xD;&#xA;Parent.Visible=True&#xD;&#xA;Parent.Parent.Melee.Visible=False" PackSize="absolute,fixed" Progress="0.500" ScrollExtent="254,4" Size="254,4" Style="attackbar_style" />
+            <Progressbar AbsorbsInput="false" BackgroundColor="#000000" DynamicData="/GameData.Self.TimeSinceRangedAutoAttack" Name="Bar" OnHide="Parent.Parent.Visible=Parent.Parent.IsHated.Visible&#xD;&#xA;Parent.OOC.Visible=True" OnShow="Parent.OOC.Visible=False&#xD;&#xA;Parent.Visible=True&#xD;&#xA;Parent.Parent.Primary.Visible=False" PackSize="absolute,fixed" Progress="0.500" ScrollExtent="254,4" Size="254,4" Style="attackbar_style" />
             <Image AbsorbsInput="false" Name="Bkg" PackSize="absolute,fixed" ScrollExtent="254,4" Size="254,4" SourceRect="220,472,380,478" SourceResource="/images/window_elements_generic.dds" />
         </Page>
     </Page>
