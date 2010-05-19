@@ -30,9 +30,9 @@
         </ImageStyle>
     </Page>
     <Page Location="0,8" Name="Threat" PackLocation="nfn,fff" PackSize="a,f" ScrollExtent="314,10" Size="314,10">
+        <Progressbar AbsorbsInput="false" Color="#FFAA00" DynamicData="/GameData.Target.SecondaryThreat" DynamicDataFilter="FFFB" Location="0,5" Name="TargetSecondaryBar" PackLocation="nfn,fff" PackSize="absolute,fixed" Progress="0.200" ScrollExtent="314,5" Size="314,5" Style="/SpecialElements.GreyscaleVitalBar.data.bar.bar_style" Visible="false" />
         <Progressbar AbsorbsInput="false" Color="#FF0000" DynamicData="/GameData.ImpliedTarget.Threat" DynamicDataFilter="FFFB" Name="ImpliedTargetBar" PackSize="absolute,fixed" Progress="0.800" ScrollExtent="314,10" Size="314,10" Style="/SpecialElements.GreyscaleVitalBar.data.bar.bar_style" Visible="false" />
         <Progressbar AbsorbsInput="false" Color="#FF0000" DynamicData="/GameData.Target.Threat" DynamicDataFilter="FFFB" Name="TargetBar" PackSize="absolute,fixed" Progress="1.000" ScrollExtent="314,10" Size="314,10" Style="/SpecialElements.GreyscaleVitalBar.data.bar.bar_style" Visible="false" />
-        <Progressbar AbsorbsInput="false" Color="#FFAA00" DynamicData="/GameData.Target.SecondaryThreat" DynamicDataFilter="FFFB" Location="0,2" Name="TargetSecondaryBar" PackLocation="nfn,fff" PackSize="absolute,fixed" Progress="0.200" ScrollExtent="314,5" Size="314,5" Style="/SpecialElements.GreyscaleVitalBar.data.bar.bar_style" Visible="false" />
         <Image AbsorbsInput="false" DynamicData="/GameData.Target.Threat" DynamicDataFilter="0001" Location="0,1" Name="TargetBkg" PackSize="absolute,fixed" ScrollExtent="314,6" Size="314,6" SourceRect="220,472,380,478" SourceResource="/images/window_elements_generic.dds" Visible="false" />
         <Image AbsorbsInput="false" DynamicData="/GameData.ImpliedTarget.Threat" DynamicDataFilter="0001" Location="0,1" Name="ImpliedBkg" PackSize="absolute,fixed" ScrollExtent="314,6" Size="314,6" SourceRect="220,472,380,478" SourceResource="/images/window_elements_generic.dds" Visible="false" />
     </Page>
