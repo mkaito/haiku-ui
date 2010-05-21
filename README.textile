@@ -1,0 +1,31 @@
+h1. HaikuUI
+
+Playing, the haiku way.
+
+h2. What is a "haiku"?
+
+A haiku is a japanese type of poem characterized mainly by it's brevity. You can read more on "wikipedia":http://en.wikipedia.org/wiki/Haiku.
+
+h2. What has a user interface in common with a Japanese poem?
+
+Nothing, really. However, it has become rather popular around the net to attach "haiku" to the name of all things brief, sober, simplistic, or minimalistic, making reference to the brevity of a haiku. By calling my mod Haiku UI, I make a commitment to simplicity and minimalism. No more features and visual noise than are necessary, but not less than essential either.
+
+h2. Is this interface done yet?
+
+Short answer: no.
+
+Longer answer: This is an idea sparked after working on several UI components of the game. The only actually ready component is the threat meter with incorporated optional auto-attack timer bars. I have not yet released anything but to my in-game guild.
+
+I have many ideas for several components, which are often based on the awesome work by Drumstixx42, and I'm working on implementing these. However, Everquest 2 UI modding is a laborious and time-consuming process. I will release components, after testing them, on "EQ2Interface":http://www.eq2interface.com. You might want to stay tuned.
+
+h2. Threat meter
+
+What I have done is merging the work of Razieh and Drumstixx on the auto attack timer bars and threat meter window, respectively. I've done away with all the padding and borders and other visual noise, and made everything fit tightly into as little space as possible, without compromising visual clarity. I have also reworked Raz's code from scratch and removed some clutter from the xml. If you are planning on doing your own version of these bars, my version is probably much easier to understand than his.
+
+h2. Casting bar & breath
+
+Nothing mind blowing here. I wanted to align the casting bar with the threat meter and visually "merge" them. Easy enough, I removed the padding, borders, moved the spell name into the casting bar, and made the bar itself a little taller. I've also added the necesary to allow horizontal resizing, which was not possible with the default version.
+
+I've basically done exactly the same for the breath indicator, but left it much smaller because it doesn't need as much prominence as the casting bar. Left to do, is having it turn red when little breath is left.
+
+All text is has been reduced in size, but is still very easy to read.
