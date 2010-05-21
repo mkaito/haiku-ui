@@ -16,7 +16,7 @@ Short answer: no.
 
 Longer answer: This is an idea sparked after working on several UI components of the game. The only actually ready component is the threat meter with incorporated optional auto-attack timer bars. I have not yet released anything but to my in-game guild.
 
-I have many ideas for several components, which are often based on the awesome work by Drumstixx42, and I'm working on implementing these. However, Everquest 2 UI modding is a laborious and time-consuming process. I will release components, after testing them, on "EQ2Interface":http://www.eq2interface.com. You might want to stay tuned.
+I have many ideas for several components, which are often based on the awesome work by Drumstixx42, and I'm working on implementing these. However, Everquest 2 UI modding is a laborious and time-consuming process. I will release components, after testing them, on "EQ2Interface":http://www.eq2interface.com, but development will always take place here.
 
 h2. Threat meter
 
