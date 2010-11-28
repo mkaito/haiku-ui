@@ -1,20 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Page IgnoreTab="false" ismodule="true" Name="Custom" PackSize="1,1" ScrollExtent="1024,768" Size="1024,768" Visible="false">
-    <include>DrumsUI/Settings/DrumsUI_StatBarWindow.xml</include>
-    <include>DrumsUI/Settings/DrumsUI_StatBarSettings.xml</include>
-
-    <include>eq2ui_custom_agustina_concentration.xml</include>
-
-    <include>Razc_Dolt.xml</include>
-    <include>Settings/RS_Conc.xml</include>
-    <include>Settings/RS_C2C.xml</include>
-    <include>Settings/RS_Abar.xml</include>
-    <include>Settings/RS_RS.xml</include>
-    <include>Settings/RS_ES.xml</include>
-    <include>Settings/RS_RWS.xml</include>
-    <include>Settings/RS_RWL.xml</include>
-    <include>Settings/RS_Effects.xml</include>
+<include>DrumsUI/Settings/DrumsUI_PlayerCureWindow.xml</include>
+<include>DrumsUI/Settings/DrumsUI_PartyClickWindow.xml</include>
+<include>DrumsUI/Settings/DrumsUI_EffectsWindow.xml</include>
+<include>DrumsUI/Settings/DrumsUI_StatBarWindow.xml</include>
+<include>DrumsUI/Settings/DrumsUI_ClickButtonSettings.xml</include>
+<include>DrumsUI/Settings/DrumsUI_EffectsSettings.xml</include>
+<include>DrumsUI/Settings/DrumsUI_StatBarSettings.xml</include>
+<include>DrumsUI/Settings/DrumsUI_TextSettings.xml</include>
+<include>eq2ui_custom_clickbuff.xml</include>
 </Page>
-<Namespace Name="R_Styles">
-    <include>R_Styles.xml</include>
-</Namespace>
