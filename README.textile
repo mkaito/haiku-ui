@@ -1,3 +1,7 @@
+h1. Compatibility
+
+This for is currently compatible with DrumsUI 1.18. I'm working on 1.19.
+
 h1. Haiku
 
 This is my fork of DrumsUI. In most cases, the functionality from upstream is kept, and only cosmetic modifications are made. The motivation behind this fork, is that I could never find a UI as minimalistic as I like them. I love the way Drumstixx42 handles scripting and options, but the looks just weren't good enough for me. So I decided to fork. When possible, upstream changes are merged into my fork.
