@@ -1,6 +1,22 @@
-h1. DrumsUI Remix
+h1. Haiku
 
-This is basically a fork of the original DrumsUI found on eq2interface.com. This repo keeps the modifications to that project I've done to cover my own needs and tastes. All functionality is kept and the overall style is the same.
+This is my fork of DrumsUI. In most cases, the functionality from upstream is kept, and only cosmetic modifications are made. The motivation behind this fork, is that I could never find a UI as minimalistic as I like them. I love the way Drumstixx42 handles scripting and options, but the looks just weren't good enough for me. So I decided to fork. When possible, upstream changes are merged into my fork.
+
+h2. What is a "haiku"?
+
+A haiku is a japanese type of poem characterized mainly by it's brevity. You can read more on "wikipedia":http://en.wikipedia.org/wiki/Haiku.
+
+h2. What has a user interface in common with a Japanese poem?
+
+Nothing, really. However, it has become rather popular around the net to attach "haiku" to the name of all things brief, sober, simplistic, or minimalistic, making reference to the brevity of a haiku. By calling my mod Haiku UI, I make a commitment to simplicity and minimalism. No more features and visual noise than are necessary, but not less than essential either.
+
+h2. Is this interface done yet?
+
+Short answer: no.
+
+Longer answer: I'm working on many things, while trying to keep up with upstream changes, which are not always easy to work in. Some pieces are kind of ready, but I'm testing them myself these days on raid. I use them, take notes, and apply changes as I see fit. Some people have already shown interest in helping me test, and more are definitely welcome, as long as you realize that I don't consider the whole thing done yet.
+
+Development will always take place here. Ideas are implemented in branches and merged to master as I test them. It is therefore safe to use the master branch. As safe as anything "beta", anyway.
 
 h2. Chat Window
 
@@ -13,18 +29,12 @@ h3. Differences
 * Added an AFK checkbox (tinted red), and a visual cue while AFK.
 * Setting the window to "Frame only" or "Frame and Titlebar" will hide the input box and resize the text display area accordingly. Default chat button is also hidden.
 
-h2. Maintained Window
+h2. Maintained
 
-I found the icons too big and cumbersome. I've made them smaller and added some padding.
+I found the icons too big and cumbersome. I've made them smaller and added some padding. Only the remaining amount is shown on top of icons. In extended mode, you'll see target name and remaining duration on the right. Hovering a cell will swap target name into spell name.
 
-h2. Raid & Group Windows
+h2. Raid, Group, and Player
 
-The per-group border in the raid window always annoyed me. It's invisible now, with no option to fade it in. I should probably link it to the window frame.
+Basically, everything is much smaller now. I've also removed levels, talk icons, class icons, and other non-essential information. Names will change colours based on active detrimental effects. Green for Noxious, Blue for Arcane, Yellow for Elemental, Red for Trauma, and Bright Pink for Curses. The display will only show one colour at a time, despite multiple detrimental effects being active on a target. This could be considered a bug, but I do not. The colour layers are but a means for non-healers to get an overview on detrimental status. Think of the non-curable nox on Sages, and such. You no longer need to have the raid window in advanced mode just to watch for something to happen. Of course, as a healer, you'll want the window in advanced mode anyway, to access click2cure.
 
-Health bars in both windows have been made taller by 2px. This is quite subjective, since I'm a templar, but it makes it much easier to have a clear overview of health status across the raid/group.
-
-The group window now shows concentration slots above the self entry, for easier tracking. Names now use the "Small" style, and are thus smaller.
-
-h2. Player Window
-
-Concentration slot style and position has been altered. Effect icons have been resized and repositioned slightly. Some status icons are now in the lower right corner. The window overall is much smaller. Also, health and power numbers were moved on top of the corresponding progress bars.
+The group window uses the same sizes as the raid window, but doesn't do detrimental colouring. It will never show yourself, and the player window has been modified to fit in style. Place them next to eachother. The player window looks exactly the same as a group slot. It's just a little taller, to display concentration slots on top of your name. I've also added click2cast buttons from the group window to the player window. These use the settings from the group window, so configure them from there. The settings button on the player window will configure cure options for yourself.
