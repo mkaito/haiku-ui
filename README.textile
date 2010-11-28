@@ -1,6 +1,6 @@
 h1. Compatibility
 
-This for is currently compatible with DrumsUI 1.18. I'm working on 1.19.
+This fork is currently compatible with DrumsUI 1.18. I'm working on 1.19.
 
 h1. Haiku
 
@@ -42,3 +42,7 @@ h2. Raid, Group, and Player
 Basically, everything is much smaller now. I've also removed levels, talk icons, class icons, and other non-essential information. Names will change colours based on active detrimental effects. Green for Noxious, Blue for Arcane, Yellow for Elemental, Red for Trauma, and Bright Pink for Curses. The display will only show one colour at a time, despite multiple detrimental effects being active on a target. This could be considered a bug, but I do not. The colour layers are but a means for non-healers to get an overview on detrimental status. Think of the non-curable nox on Sages, and such. You no longer need to have the raid window in advanced mode just to watch for something to happen. Of course, as a healer, you'll want the window in advanced mode anyway, to access click2cure.
 
 The group window uses the same sizes as the raid window, but doesn't do detrimental colouring. It will never show yourself, and the player window has been modified to fit in style. Place them next to eachother. The player window looks exactly the same as a group slot. It's just a little taller, to display concentration slots on top of your name. I've also added click2cast buttons from the group window to the player window. These use the settings from the group window, so configure them from there. The settings button on the player window will configure cure options for yourself.
+
+h2. Contributing
+
+This project is open source. If you find something you'd like to change, or something that needs fixing, you can either do it yourself and ask me to merge it, or simply notify me in the bug tracker on Github. Anyone who contributes at least a couple lines of code, will be given appropiate credit.
